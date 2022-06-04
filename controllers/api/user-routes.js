@@ -1,4 +1,3 @@
-
 const router = require('express').Router()
 const { User, Dish } = require('../../models')
 
@@ -27,7 +26,7 @@ router.get('/:id', (req, res) => {
         model: Dish,
         attributes: ['id', 'dishName', 'recipe', 'created_at'],
       },
-      
+
       {
         model: Dish,
         attributes: ['dishName'],

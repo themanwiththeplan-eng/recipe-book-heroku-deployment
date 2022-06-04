@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
   console.log('======================')
   Post.findAll({
     // Query configuration
+
     attributes: ['id', 'dishName', 'recipe', 'created_at'],
     order: [['created_at', 'DESC']],
     include: [
@@ -54,8 +55,8 @@ router.get('/:id', (req, res) => {
 // creating a dish
 router.post('/', withAuth, (req, res) => {
   // create 1 post
-  Post.create({
-    dishname: req.body.dishName,
+  Dish.create({
+    dishName: req.body.dishName,
     recipe: req.body.recipe,
     user_id: req.session.user_id,
   })
@@ -70,7 +71,7 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
-      dishname: req.body.dishName,
+      dishName: req.body.dishName,
       recipe: req.body.recipe,
     },
     {

@@ -2,9 +2,9 @@ async function editFormHandler(event) {
   event.preventDefault()
 
   const dishName = document
-    .querySelector('input[name="dish-dishName"]')
+    .querySelector('input[name="post-title"]')
     .value.trim()
-  const recipe = document.querySelector('input[name="recipe"]').value.trim()
+  const recipe = document.querySelector('input[name="post"]').value.trim()
   console.log(dishName)
   console.log(recipe)
 
@@ -15,7 +15,7 @@ async function editFormHandler(event) {
   const response = await fetch(`/api/dishes/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
-      post_id: id,
+      dish_id: id,
       dishName,
       recipe,
     }),
@@ -32,5 +32,5 @@ async function editFormHandler(event) {
 }
 
 document
-  .querySelector('.edit-dish-form')
+  .querySelector('.edit-post-form')
   .addEventListener('submit', editFormHandler)

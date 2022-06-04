@@ -32,7 +32,7 @@ Dish.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dishes',
+    modelName: 'dish',
   }
 )
 

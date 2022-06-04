@@ -4,18 +4,17 @@ const { Dish, User } = require('../models')
 const withAuth = require('../utils/auth')
 
 router.get('/', withAuth, (req, res) => {
-  Post.findAll({
+  Dish.findAll({
     where: {
       // use the ID from the session
       user_id: req.session.user_id,
     },
     attributes: ['id', 'dishName', 'recipe', 'created_at'],
     include: [
-      
       {
         model: User,
         attributes: ['username'],
-      }
+      },
     ],
   })
     .then((dbPostData) => {
@@ -40,7 +39,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
         model: User,
         attributes: ['username'],
       },
-     
     ],
   })
     .then((dbPostData) => {
