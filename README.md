@@ -1,10 +1,17 @@
-# App Name
-## The Man With The Plan Recipe Book
-# Purpose
-- an app using server-side APIs for a weather dashboard
-# Technology Used
+# The Man With The Plan Recipe Book
+
+---
+
+## Purpose
+Made this app with the purpose of sharing recipes and being able to show skills using certain web technologies.
+
+---
+
+## Technology Used
 - HTML, CSS, JavaScript, BootStrap, SQL, API's
-# Website Links
-- ????
-- ???
-## IMAGES/Screenshots
+
+---
+
+## Website Links
+- https://recipe-book-0.herokuapp.com/dashboard
+
