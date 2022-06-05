@@ -4,13 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server",
-    "dev": "cross-env, NODE_ENV=development nodemon server",
+    "start": "node server.js",
     "seeds": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/themanwiththeplan-eng/recipe-book.git"
+    "url": "git+https://github.com/themanwiththeplan-eng/recipe-book-heroku-deployment.git"
   },
   "keywords": [],
   "author": "",
